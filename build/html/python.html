@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Python &#8212; Tools Docs  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Jupyter" href="jupyter.html" />
+    <link rel="prev" title="Working Tools Documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="python">
+<h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<p>Python is most often best installed using a package from <a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>.</p>
+<p>Picking a version is a tradeoff between length of future maintenance and support, functionality, and time for 3rd party library developers to update their code to the latest versions available.</p>
+<p>As a rule of thumb, find the current major development (pre-release) version (at time of writing in May 2022, this is Python 3.11) and drop down a couple of versions (to, in this case 3.9). This should give a reasonable balance between longevity and compatibility with 3rd party libraries.</p>
+<p>After installation, it’s good practice to create a python virtual environment using <a class="reference external" href="https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/"><code class="docutils literal notranslate"><span class="pre">virtualenv</span></code></a> in which to cultivate your development envrionment.</p>
+<p>Two advantages of doing this are:</p>
+<ul class="simple">
+<li><p>you can more confidently experiment with new modules and modifications in an isolated virtual environment, and if something goes wrong you can trash and start again</p></li>
+<li><p>using the pip freeze method to store an environments contents, this rebuild process can be automated and ported over to other environments where someone else might want to run your code</p></li>
+</ul>
+<p>Creating a virtual environment usually requries defining some name and location for your environment content, which after <code class="docutils literal notranslate"><span class="pre">cd</span></code>-ing to on your terminal session, you can create using the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
+<span class="n">virtualenv</span> <span class="n">devpy</span>
+</pre></div>
+</div>
+<p>Having created your virtual environment, activate it using the <code class="docutils literal notranslate"><span class="pre">activate</span></code> script located in the environment’s <code class="docutils literal notranslate"><span class="pre">scripts</span></code> or <code class="docutils literal notranslate"><span class="pre">bin</span></code> folder, which will update your session’s path variables such that the python executables and installation procedures will deploy new libraries in isolation to that environment.</p>
+<p>To store a copy of a populated environment’s contents, use the command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">freeze</span>
+</pre></div>
+</div>
+<p>To see all the modules and their version-numbers.</p>
+<p>This output can be saved to a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file which can be ported to another machine, or stored somewhere convenient and can then be used as configuration to a <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> command to replicate that environment elsewhere, or on the same machine at a future date.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Tools Docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graphviz.html">Graphviz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker.html">Docker</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Working Tools Documentation</a></li>
+      <li>Next: <a href="jupyter.html" title="next chapter">Jupyter</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Thomas Kimber.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/python.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
