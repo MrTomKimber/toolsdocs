@@ -26,7 +26,7 @@ Matplotlib provides a wide range of visualisation options, a selection of which 
 | :----: | :----: | :----: |
 |plot<br><a href="#plot">![test](images/plot_w100.png)</a>|scatter <br><a href="#scatter">![test](images/scatter_w100.png)</a>|bar<br><a href="#bar">![test](images/bar_w100.png)</a>|
 |histogram<br><a href="#histogram">![test](images/hist_w100.png)</a>|boxplot<br><a href="#boxplot">![test](images/boxplot_w100.png)</a>|violin<br><a href="#violin-plot">![violin](images/violinplot_w100.png)</a>|
-|image<br><a href="python.html">![test](images/plot_w100.png)</a>|network<br><a href="python.html">![test](images/plot_w100.png)</a>|bubble<br><a href="python.html">![test](images/test.png)</a>|
+|image<br><a href="#image-plot">![test](images/imageplot_w100.png)</a>|network<br><a href="python.html">![test](images/plot_w100.png)</a>|bubble<br><a href="python.html">![test](images/test.png)</a>|
 
 
 ### Plot
@@ -203,3 +203,28 @@ ax.set_xticklabels(labels=labels)
 ```
 
 ![violinplot](images/violinplot.png)
+
+### Image Plot
+
+An image plot is a good way to reveal structure within a matrix of numeric data.
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+im_array = np.array([ [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
+                      [ 1, 2, 15, 4, 5, 6, 15, 8, 9 ],
+                      [ 2, 3, 4, 5, 6, 7, 8, 9, 10 ],
+                      [ 3, 4, 5, 6, 7, 8, 9, 10, 11 ],
+                      [ 4, 5, 6, 7, 8, 9, 10, 11, 12 ],
+                      [ 5, 6, 15, 8, 9, 10, 15, 12, 13 ],
+                      [ 6, 7, 8, 15, 15, 15, 12, 13, 14 ],
+                      [ 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
+                    ])
+
+fig = plt.figure(figsize=(10,10))
+plt.imshow(im_array, interpolation=None)
+```
+
+![imageplot](images/imageplot.png)
