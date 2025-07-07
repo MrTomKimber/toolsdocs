@@ -26,6 +26,7 @@ More architectural and positioning pieces describing common topics.
    :caption: Architectural Contents:
 
    product
+   ontologies
 
 
 Indices and tables

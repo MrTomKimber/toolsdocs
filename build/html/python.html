@@ -1,17 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python &#8212; Tools Docs  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Jupyter" href="jupyter.html" />
@@ -19,8 +18,9 @@
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  
 
   </head><body>
   
@@ -33,17 +33,21 @@
           <div class="body" role="main">
             
   <section id="python">
-<h1>Python<a class="headerlink" href="#python" title="Permalink to this heading">¶</a></h1>
+<h1>Python<a class="headerlink" href="#python" title="Link to this heading">¶</a></h1>
 <p>Python is most often best installed using a package from <a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>.</p>
 <p>Picking a version is a tradeoff between length of future maintenance and support, functionality, and time for 3rd party library developers to update their code to the latest versions available.</p>
 <p>As a rule of thumb, find the current major development (pre-release) version (at time of writing in May 2022, this is Python 3.11) and drop down a couple of versions (to, in this case 3.9). This should give a reasonable balance between longevity and compatibility with 3rd party libraries.</p>
+<section id="virtual-environments-and-package-management-tools">
+<h2>Virtual Environments and Package Management Tools<a class="headerlink" href="#virtual-environments-and-package-management-tools" title="Link to this heading">¶</a></h2>
+<section id="virtualenv">
+<h3>Virtualenv<a class="headerlink" href="#virtualenv" title="Link to this heading">¶</a></h3>
 <p>After installation, it’s good practice to create a python virtual environment using <a class="reference external" href="https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/"><code class="docutils literal notranslate"><span class="pre">virtualenv</span></code></a> in which to cultivate your development envrionment.</p>
 <p>Two advantages of doing this are:</p>
 <ul class="simple">
 <li><p>you can more confidently experiment with new modules and modifications in an isolated virtual environment, and if something goes wrong you can trash and start again</p></li>
 <li><p>using the pip freeze method to store an environments contents, this rebuild process can be automated and ported over to other environments where someone else might want to run your code</p></li>
 </ul>
-<p>Creating a virtual environment usually requries defining some name and location for your environment content, which after <code class="docutils literal notranslate"><span class="pre">cd</span></code>-ing to on your terminal session, you can create using the following commands:</p>
+<p>Creating a virtual environment usually requires defining some name and location for your environment content, which after <code class="docutils literal notranslate"><span class="pre">cd</span></code>-ing to on your terminal session, you can create using the following commands:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
 <span class="n">virtualenv</span> <span class="n">devpy</span>
 </pre></div>
@@ -59,13 +63,24 @@
 </pre></div>
 </div>
 </section>
+<section id="pipenv">
+<h3>Pipenv<a class="headerlink" href="#pipenv" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="https://docs.pipenv.org/">Pipenv</a> is an advanced alternative to virtualenv that more tightly integrates pip and virtualenv. It can make managing multiple python versions and virtual environments relatively easily.</p>
+</section>
+<section id="conda">
+<h3>Conda<a class="headerlink" href="#conda" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="https://github.com/conda/conda">Conda</a> is an open-source packagement system and environment management system for installing multiple versions of software packages and their dependencies (and switching between them).</p>
+<p>One reason for considering conda would be where python integration with GPUs for scientific computing and machine learning is required, as conda can help manage the broader ecosystem of drivers, libraries and tools for GPU accelerated projects (e.g. CUDA NVIDIA drivers)</p>
+</section>
+</section>
+</section>
 
 
           </div>
           
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 <h1 class="logo"><a href="index.html">Tools Docs</a></h1>
 
@@ -77,14 +92,22 @@
 
 
 <h3>Navigation</h3>
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tooling Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#virtual-environments-and-package-management-tools">Virtual Environments and Package Management Tools</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphviz.html">Graphviz</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sphinx.html">Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker.html">Docker</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Architectural Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="product.html">Data Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ontologies.html">Ontologies</a></li>
 </ul>
 
 <div class="relations">
@@ -96,7 +119,7 @@
   </ul></li>
 </ul>
 </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -104,7 +127,7 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
 
 
@@ -119,11 +142,11 @@
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2022, Thomas Kimber.
+      &#169;2022, Thomas Kimber.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
       
       |
       <a href="_sources/python.md.txt"

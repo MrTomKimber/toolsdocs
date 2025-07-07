@@ -1,12 +1,12 @@
 # Data Products
 
-## What is a Data Product? - Definition by property
+## What is a Data Product? - A classification defined by properties
 
 It is convenient to define some unit of organisation to shape our activities and thoughts around data. 
 
 Enter the concept of a "data product". 
 
-A product is some kind of refined object or material that has been packaged for use. We might have some shared expectations around its provenance, quality and lineage - we'd expect it to be legal and compliant with local regulations, and we'd want to be able to access it from some kind of distribution channel available to the user. If something goes wrong, we need to be able to communicate with someone who has responsibility for the product, either to make it good, or to help develop the product so it's more in keeping with our needs. 
+A product is some kind of refined object or material that has been packaged for use. We might have some shared expectations around its provenance, quality and lineage - we'd expect it to be legal and compliant with local regulations, and we'd want to be able to access it from some kind of distribution channel available to the user. If something goes wrong, we need to be able to communicate with someone who has responsibility for the product, either to make it good, or to help develop the product so it's more in keeping with our needs.
 
 Products share all of these attributes, as illustrated below:
 
@@ -53,13 +53,16 @@ An enterprise model showing all anticipated integration points between data prod
 
 When we buy a product, we expect and trust it to be safe. So we assume it conforms to regulations and/or standards of safety. If we buy a food product for example, we can expect standards of non-toxicity or purity to be upheld. 
 
-Similarly with data products, we need to be assured that they are legal and safe. Some stipulations in personal data regulations for example place an obligation for datasets that must be upheld. When using a data product, it should be clear what regulatory obligations have already been taken care of already, or if there are additional obligations we must take on when accessing or using the data product. 
+Similarly with data products, we need to be assured that they are legal and safe. Some stipulations in personal data regulations for example place an obligation for datasets that must be upheld. When using a data product, it should be clear what regulatory obligations have been taken care of already, or if there are additional obligations we must take on when accessing or using the data product.
 
 All applicable regulations should be published with explicit references as to where they might apply to any given data product, what additional activities and process will need to be performed and evidence/metrics demonstrating these are being applied appriately both for audit and self-serve attestation.
 
 ## Supported
 
-If we buy a product today, we might want to be assured that we can have it serviced or maintained at some point in the future. We might require after-sales services, or be able to communicate our ongoing needs so that the producers of the products we need are kept up-to-date with our changing requirements. We need a complaints department in case something goes wrong with our product, so we can communicate issues as and when they arise. 
+If we buy a product today, if it runs out or becomes obsolete, we will want to be able to get hold of a replacement. If the product is still being produced we will be assured that we can have it serviced or maintained at some point in the future. We might require after-sales services, or wish to communicate our ongoing needs so the producers are kept up-to-date with our changing requirements. We need a complaints department in case something goes wrong with our product, so we can communicate issues as and when they arise.
 
-And so it is with data products - they should be owned/stewarded such that data quality breaches can be reported with an expectation of resolution, or where meta-data in the product's packaging doesn't reflect the reality of the product in some way. As the product continues to provide value, there needs to be some support and maintenance activities keeping the data fresh and relevant, to help integrate it with new datasets or requirements and otherwise take operational responsibility for its continued use within the organisation. 
+And so it is with data products - they should be owned/stewarded such that the process underlying the product remains relevant, so that indentified data quality fails or meta-data inaccuracies can remedied. As the product continues to provide value, there needs to be some support and maintenance activities keeping the data fresh and relevant, to keep the infrastructure and tooling used to generate the data product working, ot needs to be integrated with new datasets or requirements and otherwise take operational responsibility for the continued use of the product within the organisation.
+
+The operationalisation of the data product requires an ongoing operating model with people to whom roles and responsibilities can be clearly mapped.
+
 

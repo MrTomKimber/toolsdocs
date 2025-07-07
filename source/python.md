@@ -6,6 +6,10 @@ Picking a version is a tradeoff between length of future maintenance and support
 
 As a rule of thumb, find the current major development (pre-release) version (at time of writing in May 2022, this is Python 3.11) and drop down a couple of versions (to, in this case 3.9). This should give a reasonable balance between longevity and compatibility with 3rd party libraries.
 
+## Virtual Environments and Package Management Tools
+
+### Virtualenv 
+
 After installation, it's good practice to create a python virtual environment using [`virtualenv`](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/) in which to cultivate your development envrionment.
 
 Two advantages of doing this are:
@@ -35,3 +39,14 @@ This output can be saved to a `requirements.txt` file which can be ported to ano
 ```
 pip install -r requirements.txt
 ```
+
+### Pipenv
+
+[Pipenv](https://docs.pipenv.org/) is an advanced alternative to virtualenv that more tightly integrates pip and virtualenv. It can make managing multiple python versions and virtual environments relatively easily.
+
+### Conda
+
+[Conda](https://github.com/conda/conda) is an open-source packagement system and environment management system for installing multiple versions of software packages and their dependencies (and switching between them).
+
+One reason for considering conda would be where python integration with GPUs for scientific computing and machine learning is required, as conda can help manage the broader ecosystem of drivers, libraries and tools for GPU accelerated projects (e.g. CUDA NVIDIA drivers)
+

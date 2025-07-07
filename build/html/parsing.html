@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Parsing &#8212; Tools Docs  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="parsing">
+<h1>Parsing<a class="headerlink" href="#parsing" title="Link to this heading">¶</a></h1>
+<p>Parsing is a broad term used to describe the conversion of information provided in one representation into another differently structured representation.</p>
+<p>For example, parsing of a csv file means reading in text strings which are then processed and transformed into records of data each with content associated with a set of fields or attributes.</p>
+<p>Other parsing flows of this type might include reading XML or JSON files and marshalling their data into a form that supports processing, reporting or analysis. The XML or JSON specifications might include schema-describing files, such as XSDs or JSON-Schema documents that can be used to validate the proper formatting and construction of a given input file. Given the possible complexity behind some of these data packaging schemes, tight validation checks can be invaluable prior to running any automated workflow against what could be incorrectly structured input data.</p>
+<p>In addition to reading in data that’s provided in increasingly complex structured formats, another common parsing requirement is to consume text that’s been written to communicate rules, instructions, specifications or configuration in some formally defined language. These language files must be parsed (in some cases compiled) in order to extract their meaning.</p>
+<p>For these language style constructs, parsing is commonly the process of reading in the text written in some language, and converting it into an Abstract Syntax Tree (AST). An AST is often some kind of tree or network structure that enables a program to walk or navigate its different branches, enabling automation or generation of some calculation, function or result. Such processes might include compilation, where a relatively high-level language might be compiled, via an AST, into executable machine code.</p>
+<p>Alternately, an AST enables, given an appropriate dictionary of functions or aliases, the translation of a given formal language into another language. Once complete, a compiler or parser for the new language can be used to run or execute the newly generated code.</p>
+<p>Languages don’t need to be written as text, many different objects can be considered parsable. Data models can be parsed, and converted into RDBMS specific DDL code, enabling the model to serve as both the document, the specification and the source of the code for the finished product. And to refer back to the AST concept and use it in reverse, given some DDL, or even a SELECT statement as text, this can be formally parsed and used to construct a pictorial model, enabling the automated documentation of technical assets directly from their code.</p>
+<section id="simple-parsing-code-snippets">
+<h2>Simple Parsing Code Snippets<a class="headerlink" href="#simple-parsing-code-snippets" title="Link to this heading">¶</a></h2>
+<section id="common-string-manipulations">
+<h3>Common String Manipulations<a class="headerlink" href="#common-string-manipulations" title="Link to this heading">¶</a></h3>
+<section id="block-toggling-characters-and-common-escaping-patterns">
+<h4>Block Toggling Characters and Common Escaping Patterns<a class="headerlink" href="#block-toggling-characters-and-common-escaping-patterns" title="Link to this heading">¶</a></h4>
+</section>
+<section id="matching-open-close-block-definitions">
+<h4>Matching Open-Close Block Definitions<a class="headerlink" href="#matching-open-close-block-definitions" title="Link to this heading">¶</a></h4>
+<p>Some structures you’ll find out in the wild include the concept of defining blocks using separate opening and closing characters. (Brackets), [square brackets], {curly braces}, “opening and closing speech-marks”, &lt;angle-brackets&gt; and «guillemets» are all examples of this type of structure found with varying frequency. Simple scanning searches can be used to define blocks such as these, but care should be taken as these structures are commonly nested.</p>
+<p>Where bracketing is nested, it usually conveys imporant structure, so for example <code class="docutils literal notranslate"><span class="pre">(2</span> <span class="pre">+</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">b)</span> <span class="pre">x</span> <span class="pre">c</span></code> means something very different to <code class="docutils literal notranslate"><span class="pre">(2</span> <span class="pre">+</span> <span class="pre">a</span> <span class="pre">)</span> <span class="pre">+</span> <span class="pre">(b</span> <span class="pre">x</span> <span class="pre">c)</span></code> or variations thereof. A common concept for parsing through bracketed content is to match-off appropriately paired opening and closing bracket pairs.</p>
+<p>The following code, given a single set of opening/closing characters and some text, will return an array describing the positions of each paired set of braces. It might need further work to handle cases where multiple different pairing schemes (say where parentheses, square and curly brackets are all used) but this should work for single-style paired delimiters like these.</p>
+<p>Adopting use of the re library to find the different values extends the flexibility somewhat of the search parameters, e.g. multi-char open-close delimiters can be found like <code class="docutils literal notranslate"><span class="pre">&lt;--</span></code> and <code class="docutils literal notranslate"><span class="pre">--&gt;</span></code>, or <code class="docutils literal notranslate"><span class="pre">/*</span></code> and <code class="docutils literal notranslate"><span class="pre">*/</span></code> which might denote blocks of commentary in different contexts.</p>
+</section>
+</section>
+<section id="regular-expressions">
+<h3>Regular Expressions<a class="headerlink" href="#regular-expressions" title="Link to this heading">¶</a></h3>
+</section>
+<section id="formal-grammars">
+<h3>Formal Grammars<a class="headerlink" href="#formal-grammars" title="Link to this heading">¶</a></h3>
+<p>A <em>formal grammar</em> is a linguistics concept initially developed by Noam Chomsky in 1956 wherein languages are described as a set consisting of {V, T, P, S} where:</p>
+<ul class="simple">
+<li><p>V are the lanuguage non-terminals,</p></li>
+<li><p>T are the Terminals,</p></li>
+<li><p>P are Production Rules and</p></li>
+<li><p>S describes something called the Start Symbol.</p></li>
+</ul>
+<p>In any such grammar, the Terminal smbols describe the individual words that are reserved in the language. The non-terminal symbols are named higher level structures and phrases that feature in the language, and the Production Rules describe in detail how these non-terminal symbols can be composed from mixtures of terminal and non-terminal symbols. The Start symbol S represents all possible legal phrases and statements expressable within the language. If there is an unbroken link from all the Terminal symbols, through non-terminals described by production-rules, then the grammar is complete and can be parsed using one of a number of strategies.</p>
+<p>This approach is useful when parsing languages meant to control computers, programming languages, data definition languages and other DSLs are often made readable using the formal grammar parsing theory.</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Tools Docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Tooling Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graphviz.html">Graphviz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker.html">Docker</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Architectural Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="product.html">Data Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ontologies.html">Ontologies</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2022, Thomas Kimber.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/parsing.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

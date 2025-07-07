@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Graphviz &#8212; Tools Docs  documentation</title>
+    <title>Clustering &#8212; Tools Docs  documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
@@ -13,8 +13,6 @@
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Sphinx" href="sphinx.html" />
-    <link rel="prev" title="Matplotlib" href="matplotlib.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -32,21 +30,19 @@
 
           <div class="body" role="main">
             
-  <section id="graphviz">
-<h1>Graphviz<a class="headerlink" href="#graphviz" title="Link to this heading">¶</a></h1>
-<p><a class="reference external" href="https://graphviz.org/">Graphviz</a> is open source graph vizualisation software enabling diagrams to be automatically laid-out in displays using a number of optimised layout algorithms.</p>
-<p><a class="reference external" href="https://graphviz.org/download/">Installation</a> instructions vary according to environment, but it tends to be available via Linux packaging manager repositories, as well as Mac OS <a class="reference external" href="https://www.macports.org/">ports</a> and <a class="reference external" href="https://brew.sh/">Homebrew</a>. For windows, a <a class="reference external" href="https://graphviz.org/download/#windows">number of installers</a> exist for download.</p>
-<p>Graphviz can also be compiled direct for installation from <a class="reference external" href="https://graphviz.org/download/source/">source-code</a></p>
-<p>Graphviz has a <a class="reference external" href="https://graphviz.org/theory/">long and well documented history</a>, the algorithm and code at its core having been written sometime in the early 1990’s.</p>
-<section id="pygraphviz-python-package">
-<h2>PyGraphviz - python package<a class="headerlink" href="#pygraphviz-python-package" title="Link to this heading">¶</a></h2>
-<p><a class="reference external" href="https://pygraphviz.github.io/">PyGraphviz</a> is a python interface into the Graphviz layout package - enabling the power of Graphviz to be accessed programatically.</p>
-<p>A good example installation in Linux can be started using the following, which includes both the graphviz and pygraphviz installation commands:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">graphviz</span> <span class="n">graphviz</span><span class="o">-</span><span class="n">dev</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">pygraphviz</span>
+  <section id="clustering">
+<h1>Clustering<a class="headerlink" href="#clustering" title="Link to this heading">¶</a></h1>
+<p>Often, applying a clustering algorithm to a large dataset can help make sense of it, and break it open for more in-depth analysis.
+Many data-science algorithms exist for performing clustering, but a few choice recipies are presented here with some installation and operational considerations.</p>
+<section id="hierarchical-clustering">
+<h2>Hierarchical Clustering<a class="headerlink" href="#hierarchical-clustering" title="Link to this heading">¶</a></h2>
+<p>The python <a class="reference external" href="https://docs.scipy.org/doc/scipy/index.html">scipy library</a> contains a wealth of methods for analysing data, but specifically for clustering, the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/cluster.hierarchy.html#module-scipy.cluster.hierarchy">hierarchy</a> sub package contains powerful methods and utilities for performing clustering analysis on datasets.</p>
+<p>To install scipy, switch to your virtual environment and run the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scipy</span>
 </pre></div>
 </div>
-<p>But other installation instructions exist for <a class="reference external" href="https://pygraphviz.github.io/documentation/stable/install.html">alternative environments</a>.</p>
+<p>Clustering is the process of breaking a dataset into a number of subgroups or clusters based on percieved similarities or differences between records.</p>
+<p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html#scipy.cluster.hierarchy.linkage">scipy.cluster.hierarchy.linkage</a> is a great utility for performing clustering and is fast and easy to use. Other clustering options come built into sklearn. Some options exist for <a class="reference external" href="https://blog.paperspace.com/speed-up-kmeans-numpy-vectorization-broadcasting-profiling/">rolling one’s own using only numpy</a>.</p>
 </section>
 </section>
 
@@ -68,14 +64,11 @@
 
 <h3>Navigation</h3>
 <p class="caption" role="heading"><span class="caption-text">Tooling Contents:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Graphviz</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#pygraphviz-python-package">PyGraphviz - python package</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="graphviz.html">Graphviz</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sphinx.html">Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker.html">Docker</a></li>
 </ul>
@@ -89,8 +82,6 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="matplotlib.html" title="previous chapter">Matplotlib</a></li>
-      <li>Next: <a href="sphinx.html" title="next chapter">Sphinx</a></li>
   </ul></li>
 </ul>
 </div>
@@ -124,7 +115,7 @@
       &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
       
       |
-      <a href="_sources/graphviz.md.txt"
+      <a href="_sources/clustering.md.txt"
           rel="nofollow">Page source</a>
     </div>
 
