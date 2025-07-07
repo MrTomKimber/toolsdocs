@@ -6,7 +6,7 @@
 Working Tools Documentation
 ======================================
 
-Writeups for a collection of common development environment tools and utilities.
+Common development environment tools, packages and utilities.
 
 .. toctree::
    :maxdepth: 2
@@ -14,10 +14,18 @@ Writeups for a collection of common development environment tools and utilities.
 
    python
    jupyter
-   matplotlib
    graphviz
    sphinx
    docker
+
+Python modules and prior-art for different methods and applications:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Modules and Applications
+
+   analysis
+   Visualisation using matplotlib <matplotlib>
 
 More architectural and positioning pieces describing common topics.
 

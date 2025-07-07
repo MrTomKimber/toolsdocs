@@ -12,7 +12,7 @@ Products share all of these attributes, as illustrated below:
 
 ![Data Product Petals](images/data_product_petal.svg)
 
-## Packaged
+### Packaged
 
 When confronted with a product's packaging, we are reassured when we see constituent ingredients making up the product, along with assurances about those ingredient's lineage and quality. We see statements describing the product, how big it is, how many wheels it has, maybe additonal documentation around different use-cases, instructions even. Information about who to contact if a problem is found. All this information is meta-data about the product that is used when the product is being selected, or considered for inclusion in some plan or design. 
 
@@ -23,7 +23,7 @@ Dataset profile perhaps including Data Quality results
 Lineage - source datasets and process used to compile the product
 Statements about the product's availability, refresh frequency, coverage, exceptions and interpretation. 
 
-## Accessible
+### Accessible
 
 When selecting a product, it can be beneficial to browse some kind of catalogue or brocure to help conveniently identify what products are available and match those to our specific need. This saves time and helps make more effective our accessing the product from whatever distribution channel it is available. We might need to understand what access requirements we may need to fulfill in order to gain access to the product.
 
@@ -35,7 +35,7 @@ Multi-channel availability - the same data product might be made available over 
 Ability to access a sample of the data (curated to meet appropriate security/confidentiality standards, but enough to give a representative example of what the dataset contains)
 
 
-## Integrated
+### Integrated
 
 If we are building some aggregated system from sub-components, its important that all those components follow similar standards. A packet of bolts with metric specifications is only useful if the rest of the components you're using to construct your design also uses metric nuts, threads and tooling. An integrated product is one that has had thought and attention spent on considering the contextural and operational use-cases that the product is likely to find itself a participant, and to adopt any common standards that might be adopted in those contexts. 
 
@@ -49,7 +49,7 @@ Where data products conform to a set of design standards, we can spend much less
 
 An enterprise model showing all anticipated integration points between data products might be introduced to help users identify the connections between different data-products, and get a sense for how they can be combined.
 
-## Compliant
+### Compliant
 
 When we buy a product, we expect and trust it to be safe. So we assume it conforms to regulations and/or standards of safety. If we buy a food product for example, we can expect standards of non-toxicity or purity to be upheld. 
 
@@ -57,7 +57,7 @@ Similarly with data products, we need to be assured that they are legal and safe
 
 All applicable regulations should be published with explicit references as to where they might apply to any given data product, what additional activities and process will need to be performed and evidence/metrics demonstrating these are being applied appriately both for audit and self-serve attestation.
 
-## Supported
+### Supported
 
 If we buy a product today, if it runs out or becomes obsolete, we will want to be able to get hold of a replacement. If the product is still being produced we will be assured that we can have it serviced or maintained at some point in the future. We might require after-sales services, or wish to communicate our ongoing needs so the producers are kept up-to-date with our changing requirements. We need a complaints department in case something goes wrong with our product, so we can communicate issues as and when they arise.
 

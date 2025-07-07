@@ -26,11 +26,11 @@ Languages don't need to be written as text, many different objects can be consid
 
 Some structures you'll find out in the wild include the concept of defining blocks using separate opening and closing characters. \(Brackets\), \[square brackets\], \{curly braces\}, “opening and closing speech-marks”, \<angle-brackets\> and «guillemets» are all examples of this type of structure found with varying frequency. Simple scanning searches can be used to define blocks such as these, but care should be taken as these structures are commonly nested.
 
-Where bracketing is nested, it usually conveys imporant structure, so for example `(2 + a + b) x c` means something very different to `(2 + a ) + (b x c)` or variations thereof. A common concept for parsing through bracketed content is to match-off appropriately paired opening and closing bracket pairs.
+Where bracketing is nested, it usually conveys important structure, so for example `(2 + a + b) x c` means something very different to `(2 + a ) + (b x c)` or variations thereof. A common concept for parsing through bracketed content is to match-off appropriately paired opening and closing bracket pairs.
 
 The following code, given a single set of opening/closing characters and some text, will return an array describing the positions of each paired set of braces. It might need further work to handle cases where multiple different pairing schemes (say where parentheses, square and curly brackets are all used) but this should work for single-style paired delimiters like these.
 
-Adopting use of the re library to find the different values extends the flexibility somewhat of the search parameters, e.g. multi-char open-close delimiters can be found like `<--` and `-->`, or `/*` and `*/` which might denote blocks of commentary in different contexts.
+Adopting use of the [re](https://docs.python.org/3/library/re.html) library to find the different values extends the flexibility somewhat of the search parameters, e.g. multi-char open-close delimiters can be found like `<--` and `-->`, or `/*` and `*/` which might denote blocks of commentary in different contexts.
 
 ``` {.python}
 import re
@@ -78,6 +78,10 @@ def matching_paired_char_blocks(open_char, close_char, text):
 
 
 ### Regular Expressions
+
+[Regular expressions](https://en.wikipedia.org/wiki/Regular_expression) (often shortened to regex, or regexp) is a long-established technical language for performing pattern-matching in text.
+
+Python offers a regex module called [re](https://docs.python.org/3/library/re.html) which implements this language, and provides useful function wrappers to support common string-based operations using the language. 
 
 ### Formal Grammars
 

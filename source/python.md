@@ -1,6 +1,6 @@
 # Python
 
-Python is most often best installed using a package from [https://www.python.org/downloads/](https://www.python.org/downloads/).
+Python is most simply installed using a package from [https://www.python.org/downloads/](https://www.python.org/downloads/).
 
 Picking a version is a tradeoff between length of future maintenance and support, functionality, and time for 3rd party library developers to update their code to the latest versions available.
 
@@ -10,7 +10,7 @@ As a rule of thumb, find the current major development (pre-release) version (at
 
 ### Virtualenv 
 
-After installation, it's good practice to create a python virtual environment using [`virtualenv`](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/) in which to cultivate your development envrionment.
+After installation, it's good practice to create a python virtual environment using [`virtualenv`](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/) in which to cultivate your development environment.
 
 Two advantages of doing this are:
 
@@ -46,7 +46,11 @@ pip install -r requirements.txt
 
 ### Conda
 
-[Conda](https://github.com/conda/conda) is an open-source packagement system and environment management system for installing multiple versions of software packages and their dependencies (and switching between them).
+[Conda](https://github.com/conda/conda) is an open-source package management and environment management system for installing multiple versions of software packages and their dependencies (and switching between them).
 
 One reason for considering conda would be where python integration with GPUs for scientific computing and machine learning is required, as conda can help manage the broader ecosystem of drivers, libraries and tools for GPU accelerated projects (e.g. CUDA NVIDIA drivers)
+
+### Poetry
+
+[Poetry](https://python-poetry.org/) is another package manager with some additional tools and methods designed to support development of complete python projects. Use can help establish a common *pattern* for your code (e.g. with standardised directory structures separating source-code, tests, and other content - this is good practice at the best of times, but poetry does this for you, providing guardrails). Additionally, there are built-in tools for publishing completed code to online package repositories for others to share (this process is normally considered a separate topic, and can have a steep learning curve)
 

@@ -14,7 +14,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Ontologies" href="ontologies.html" />
-    <link rel="prev" title="Docker" href="docker.html" />
+    <link rel="prev" title="Reusable Analysis Patterns" href="analysis.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -41,9 +41,8 @@
 <p>A product is some kind of refined object or material that has been packaged for use. We might have some shared expectations around its provenance, quality and lineage - we’d expect it to be legal and compliant with local regulations, and we’d want to be able to access it from some kind of distribution channel available to the user. If something goes wrong, we need to be able to communicate with someone who has responsibility for the product, either to make it good, or to help develop the product so it’s more in keeping with our needs.</p>
 <p>Products share all of these attributes, as illustrated below:</p>
 <p><img alt="Data Product Petals" src="_images/data_product_petal.svg" /></p>
-</section>
 <section id="packaged">
-<h2>Packaged<a class="headerlink" href="#packaged" title="Link to this heading">¶</a></h2>
+<h3>Packaged<a class="headerlink" href="#packaged" title="Link to this heading">¶</a></h3>
 <p>When confronted with a product’s packaging, we are reassured when we see constituent ingredients making up the product, along with assurances about those ingredient’s lineage and quality. We see statements describing the product, how big it is, how many wheels it has, maybe additonal documentation around different use-cases, instructions even. Information about who to contact if a problem is found. All this information is meta-data about the product that is used when the product is being selected, or considered for inclusion in some plan or design.</p>
 <p>For data products, expected packaging artefacts might include:</p>
 <p>Schema definition / ERD - what entities and attributes constitute this model - a business definition
@@ -52,7 +51,7 @@ Lineage - source datasets and process used to compile the product
 Statements about the product’s availability, refresh frequency, coverage, exceptions and interpretation.</p>
 </section>
 <section id="accessible">
-<h2>Accessible<a class="headerlink" href="#accessible" title="Link to this heading">¶</a></h2>
+<h3>Accessible<a class="headerlink" href="#accessible" title="Link to this heading">¶</a></h3>
 <p>When selecting a product, it can be beneficial to browse some kind of catalogue or brocure to help conveniently identify what products are available and match those to our specific need. This saves time and helps make more effective our accessing the product from whatever distribution channel it is available. We might need to understand what access requirements we may need to fulfill in order to gain access to the product.</p>
 <p>For data products, this might include:</p>
 <p>Published metadata (a searchable subset of the content available under the “packaged” banner) in some form of searchable Data Catalogue
@@ -61,7 +60,7 @@ Multi-channel availability - the same data product might be made available over 
 Ability to access a sample of the data (curated to meet appropriate security/confidentiality standards, but enough to give a representative example of what the dataset contains)</p>
 </section>
 <section id="integrated">
-<h2>Integrated<a class="headerlink" href="#integrated" title="Link to this heading">¶</a></h2>
+<h3>Integrated<a class="headerlink" href="#integrated" title="Link to this heading">¶</a></h3>
 <p>If we are building some aggregated system from sub-components, its important that all those components follow similar standards. A packet of bolts with metric specifications is only useful if the rest of the components you’re using to construct your design also uses metric nuts, threads and tooling. An integrated product is one that has had thought and attention spent on considering the contextural and operational use-cases that the product is likely to find itself a participant, and to adopt any common standards that might be adopted in those contexts.</p>
 <p>Data products must also be inter-operable and composable with other data products or standard datasets in order for them to be more readily and usefully employed.</p>
 <p>As such, it’s important to be able to communicate what standards have been considered as being interoperable with the data product, what other products can be linked or used along side this one, making reference to any common or accepted unique primary or foreign keys that might be in use.</p>
@@ -70,16 +69,17 @@ Ability to access a sample of the data (curated to meet appropriate security/con
 <p>An enterprise model showing all anticipated integration points between data products might be introduced to help users identify the connections between different data-products, and get a sense for how they can be combined.</p>
 </section>
 <section id="compliant">
-<h2>Compliant<a class="headerlink" href="#compliant" title="Link to this heading">¶</a></h2>
+<h3>Compliant<a class="headerlink" href="#compliant" title="Link to this heading">¶</a></h3>
 <p>When we buy a product, we expect and trust it to be safe. So we assume it conforms to regulations and/or standards of safety. If we buy a food product for example, we can expect standards of non-toxicity or purity to be upheld.</p>
 <p>Similarly with data products, we need to be assured that they are legal and safe. Some stipulations in personal data regulations for example place an obligation for datasets that must be upheld. When using a data product, it should be clear what regulatory obligations have been taken care of already, or if there are additional obligations we must take on when accessing or using the data product.</p>
 <p>All applicable regulations should be published with explicit references as to where they might apply to any given data product, what additional activities and process will need to be performed and evidence/metrics demonstrating these are being applied appriately both for audit and self-serve attestation.</p>
 </section>
 <section id="supported">
-<h2>Supported<a class="headerlink" href="#supported" title="Link to this heading">¶</a></h2>
+<h3>Supported<a class="headerlink" href="#supported" title="Link to this heading">¶</a></h3>
 <p>If we buy a product today, if it runs out or becomes obsolete, we will want to be able to get hold of a replacement. If the product is still being produced we will be assured that we can have it serviced or maintained at some point in the future. We might require after-sales services, or wish to communicate our ongoing needs so the producers are kept up-to-date with our changing requirements. We need a complaints department in case something goes wrong with our product, so we can communicate issues as and when they arise.</p>
 <p>And so it is with data products - they should be owned/stewarded such that the process underlying the product remains relevant, so that indentified data quality fails or meta-data inaccuracies can remedied. As the product continues to provide value, there needs to be some support and maintenance activities keeping the data fresh and relevant, to keep the infrastructure and tooling used to generate the data product working, ot needs to be integrated with new datasets or requirements and otherwise take operational responsibility for the continued use of the product within the organisation.</p>
 <p>The operationalisation of the data product requires an ongoing operating model with people to whom roles and responsibilities can be clearly mapped.</p>
+</section>
 </section>
 </section>
 
@@ -109,15 +109,14 @@ Ability to access a sample of the data (curated to meet appropriate security/con
 <li class="toctree-l1"><a class="reference internal" href="sphinx.html">Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker.html">Docker</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Methods and Applications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="analysis.html">Reusable Analysis Patterns</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Architectural Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Data Products</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-a-data-product-a-classification-defined-by-properties">What is a Data Product? - A classification defined by properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#packaged">Packaged</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#accessible">Accessible</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#integrated">Integrated</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#compliant">Compliant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#supported">Supported</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ontologies.html">Ontologies</a></li>
@@ -127,7 +126,7 @@ Ability to access a sample of the data (curated to meet appropriate security/con
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="docker.html" title="previous chapter">Docker</a></li>
+      <li>Previous: <a href="analysis.html" title="previous chapter">Reusable Analysis Patterns</a></li>
       <li>Next: <a href="ontologies.html" title="next chapter">Ontologies</a></li>
   </ul></li>
 </ul>

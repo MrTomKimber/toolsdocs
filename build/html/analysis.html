@@ -13,6 +13,8 @@
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data Products" href="product.html" />
+    <link rel="prev" title="Docker" href="docker.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -36,11 +38,20 @@
 <h2>Clustering<a class="headerlink" href="#clustering" title="Link to this heading">¶</a></h2>
 <p>Where many data points are present in a piece of analysis, it can be useful to break the data down into different groups. If no external classification scheme can be applied, it falls to the analyst to find a meaningful way of classifying the content of the data.</p>
 <p>After identifying groups, their individual properties can be compared and contrasted with one another, usually providing a means to construct an illustrative narrative, or to tease out group-specific relationships with other data that might have been otherwise lost across a noisy channel.</p>
+<p>Often, applying a clustering algorithm to a large dataset can help make sense of it, and break it open for more in-depth analysis.</p>
+<p>Many data-science algorithms exist for performing clustering, but a few choice reciepes are presented here with some installation and operational considerations.</p>
+<section id="hierarchical-agglomorative-clustering">
+<h3>Hierarchical (Agglomorative) Clustering<a class="headerlink" href="#hierarchical-agglomorative-clustering" title="Link to this heading">¶</a></h3>
+<p>The python <a class="reference external" href="https://docs.scipy.org/doc/scipy/index.html">scipy library</a> contains a wealth of methods for analysing data, but specifically for clustering, the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/cluster.hierarchy.html#module-scipy.cluster.hierarchy">hierarchy</a> sub package contains powerful methods and utilities for performing clustering analysis on datasets.</p>
+<p>To install scipy, switch to your virtual environment and run the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scipy</span>
+</pre></div>
+</div>
+<p>Clustering is the process of breaking a dataset into a number of subgroups or clusters based on percieved similarities or differences between records.</p>
+<p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html#scipy.cluster.hierarchy.linkage">scipy.cluster.hierarchy.linkage</a> is a great utility for performing clustering and is fast and easy to use. Other clustering options come built into sklearn. Some options exist for <a class="reference external" href="https://blog.paperspace.com/speed-up-kmeans-numpy-vectorization-broadcasting-profiling/">rolling one’s own using only numpy</a>.</p>
+</section>
 <section id="k-means-clustering">
 <h3>K-Means Clustering<a class="headerlink" href="#k-means-clustering" title="Link to this heading">¶</a></h3>
-</section>
-<section id="agglomorative-clustering">
-<h3>Agglomorative Clustering<a class="headerlink" href="#agglomorative-clustering" title="Link to this heading">¶</a></h3>
 </section>
 <section id="nnmf-clustering">
 <h3>NNMF Clustering<a class="headerlink" href="#nnmf-clustering" title="Link to this heading">¶</a></h3>
@@ -48,6 +59,12 @@
 <section id="choosing-a-number-of-clusters-finding-the-elbow">
 <h3>Choosing a number of clusters - finding “the elbow”<a class="headerlink" href="#choosing-a-number-of-clusters-finding-the-elbow" title="Link to this heading">¶</a></h3>
 </section>
+</section>
+<section id="curve-fitting">
+<h2>Curve Fitting<a class="headerlink" href="#curve-fitting" title="Link to this heading">¶</a></h2>
+</section>
+<section id="network-analysis">
+<h2>Network Analysis<a class="headerlink" href="#network-analysis" title="Link to this heading">¶</a></h2>
 </section>
 </section>
 
@@ -77,6 +94,15 @@
 <li class="toctree-l1"><a class="reference internal" href="sphinx.html">Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker.html">Docker</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Methods and Applications</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Reusable Analysis Patterns</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#clustering">Clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#curve-fitting">Curve Fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#network-analysis">Network Analysis</a></li>
+</ul>
+</li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Architectural Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="product.html">Data Products</a></li>
@@ -87,6 +113,8 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="docker.html" title="previous chapter">Docker</a></li>
+      <li>Next: <a href="product.html" title="next chapter">Data Products</a></li>
   </ul></li>
 </ul>
 </div>

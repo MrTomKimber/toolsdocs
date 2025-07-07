@@ -34,8 +34,8 @@
 <h1>Clustering<a class="headerlink" href="#clustering" title="Link to this heading">¶</a></h1>
 <p>Often, applying a clustering algorithm to a large dataset can help make sense of it, and break it open for more in-depth analysis.
 Many data-science algorithms exist for performing clustering, but a few choice recipies are presented here with some installation and operational considerations.</p>
-<section id="hierarchical-clustering">
-<h2>Hierarchical Clustering<a class="headerlink" href="#hierarchical-clustering" title="Link to this heading">¶</a></h2>
+<section id="hierarchical-agglomorative-clustering">
+<h2>Hierarchical (Agglomorative) Clustering<a class="headerlink" href="#hierarchical-agglomorative-clustering" title="Link to this heading">¶</a></h2>
 <p>The python <a class="reference external" href="https://docs.scipy.org/doc/scipy/index.html">scipy library</a> contains a wealth of methods for analysing data, but specifically for clustering, the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/cluster.hierarchy.html#module-scipy.cluster.hierarchy">hierarchy</a> sub package contains powerful methods and utilities for performing clustering analysis on datasets.</p>
 <p>To install scipy, switch to your virtual environment and run the following command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scipy</span>
@@ -43,6 +43,15 @@ Many data-science algorithms exist for performing clustering, but a few choice r
 </div>
 <p>Clustering is the process of breaking a dataset into a number of subgroups or clusters based on percieved similarities or differences between records.</p>
 <p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html#scipy.cluster.hierarchy.linkage">scipy.cluster.hierarchy.linkage</a> is a great utility for performing clustering and is fast and easy to use. Other clustering options come built into sklearn. Some options exist for <a class="reference external" href="https://blog.paperspace.com/speed-up-kmeans-numpy-vectorization-broadcasting-profiling/">rolling one’s own using only numpy</a>.</p>
+</section>
+<section id="k-means-clustering">
+<h2>K-Means Clustering<a class="headerlink" href="#k-means-clustering" title="Link to this heading">¶</a></h2>
+</section>
+<section id="nnmf-clustering">
+<h2>NNMF Clustering<a class="headerlink" href="#nnmf-clustering" title="Link to this heading">¶</a></h2>
+</section>
+<section id="choosing-a-number-of-clusters-finding-the-elbow">
+<h2>Choosing a number of clusters - finding “the elbow”<a class="headerlink" href="#choosing-a-number-of-clusters-finding-the-elbow" title="Link to this heading">¶</a></h2>
 </section>
 </section>
 
