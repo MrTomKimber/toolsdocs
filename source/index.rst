@@ -12,11 +12,12 @@ Common development environment tools, packages and utilities.
    :maxdepth: 2
    :caption: Tooling Contents:
 
-   python
-   jupyter
-   graphviz
-   sphinx
-   docker
+   Coding with Python <python>
+   Notebook/IDE with Jupyter <jupyter>
+   Graph Layout with Graphviz <graphviz>
+   Document Generation with Sphinx <sphinx>
+   Virtual Infrastructure Provisioning with Docker <docker>
+   Version Control with Git <git>
 
 Python modules and prior-art for different methods and applications:
 
