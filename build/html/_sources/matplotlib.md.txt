@@ -26,7 +26,7 @@ Matplotlib provides a wide range of visualisation options, a selection of which 
 | :----: | :----: | :----: |
 |plot<br><a href="#plot">![test](images/plot_w100.png)</a>|scatter <br><a href="#scatter">![test](images/scatter_w100.png)</a>|bar<br><a href="#bar">![test](images/bar_w100.png)</a>|
 |histogram<br><a href="#histogram">![test](images/hist_w100.png)</a>|boxplot<br><a href="#boxplot">![test](images/boxplot_w100.png)</a>|violin<br><a href="#violin-plot">![violin](images/violinplot_w100.png)</a>|
-|image<br><a href="#image-plot">![test](images/imageplot_w100.png)</a>|network<br><a href="python.html">![test](images/plot_w100.png)</a>|bubble<br><a href="python.html">![test](images/test.png)</a>|
+|image<br><a href="#image-plot">![test](images/imageplot_w100.png)</a>|network<br><a href="python.html">![test](images/plot_w100.png)</a>|gridspec<br><a href="#gridspec">![test](images/gridspecplot_w100.png)</a>|
 
 
 ### Plot
@@ -228,3 +228,59 @@ plt.imshow(im_array, interpolation=None)
 ```
 
 ![imageplot](images/imageplot.png)
+
+### Gridspec
+
+Matplotlib contains the gridspec framework for laying out multiple plots within a single plot. This can come in handy when comparing scenarios to one another, or when creating a "dashboard" containing multiple views over the same data.
+
+In this example, a plot is generated containing 100 sub-plots arranged in a 10x10 grid.
+```
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import gridspec
+%matplotlib inline
+
+def row_norm(v):
+    """Convert a vector *a* into its normalised equivalent, where sum(a) = 1"""
+    if v.ndim == 1:
+        return v / np.sum(v)
+    else:
+        raise TypeError("Expects vector")
+
+def invert_proportion(v):
+    """Given a vector a, invert its contents whilst preserving relative magnitudes"""
+    if v.ndim == 1:
+        e = np.full(v.shape, 1/v.shape[0])
+        d = e/row_norm(v)
+
+        return row_norm(d)
+
+def avg(*vals):
+    return sum(vals)/len(vals)
+
+def gaussian(x, sigma=1, h=1, mid=0):
+    variance = pow(sigma, 2)
+    return h * exp(-pow(x-mid, 2)/(2*variance))
+
+n = 4
+s = 2
+w = 10
+gw = int((s+0.5) * w)
+fw = gw * n
+
+fig = plt.figure(figsize=(10,10))
+gs = gridspec.GridSpec(10,10, figure=fig)
+for i in range(0,100):
+
+    #a = np.sort(row_norm(np.random.rand(n)))
+    a = row_norm(np.random.rand(n))
+    ax = fig.add_subplot(gs[i])
+    ax.bar(height=a, x=range(0,fw,gw), width=w, alpha=0.5, color=[(0.2, 0.9, 0.9)])
+    ax.bar(height=invert_proportion(a), width=w, x=range(0+w,fw+w,gw), alpha=0.5 , color=[(0.9, 0.1, 0.6)])
+    #ax.axis("off")
+    plt.ylim([0,1])
+    ax.set_xticks([])
+    ax.set_yticks([])
+
+```
+![imageplot](images/gridspecplot.png)

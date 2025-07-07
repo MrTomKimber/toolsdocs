@@ -13,7 +13,7 @@ Two advantages of doing this are:
 * you can more confidently experiment with new modules and modifications in an isolated virtual environment, and if something goes wrong you can trash and start again
 * using the pip freeze method to store an environments contents, this rebuild process can be automated and ported over to other environments where someone else might want to run your code
 
-Creating a virtual environment usually requries defining some name and location for your environment content, which after `cd`-ing to on your terminal session, you can create using the following commands:
+Creating a virtual environment usually requires defining some name and location for your environment content, which after `cd`-ing to on your terminal session, you can create using the following commands:
 
 ```
 pip install virtualenv

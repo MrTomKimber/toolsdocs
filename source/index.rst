@@ -10,7 +10,7 @@ Writeups for a collection of common development environment tools and utilities.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Tooling Contents:
 
    python
    jupyter
@@ -19,7 +19,14 @@ Writeups for a collection of common development environment tools and utilities.
    sphinx
    docker
 
+More architectural and positioning pieces describing common topics.
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Architectural Contents:
+
+   product
+   ontologies
 
 
 Indices and tables
